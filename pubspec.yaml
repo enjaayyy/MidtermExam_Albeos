@@ -19,4 +19,6 @@ flutter:
   uses-material-design: true
   assets: 
     - images/Vector.png
+    - images/maldives.png
+    - images/woman.png
   
