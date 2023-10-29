@@ -461,10 +461,11 @@ class MainApp extends StatelessWidget {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(15),
                 ),
-                child: Stack (
+                child: ElevatedButton (
+                  child:  Stack (
                   children: [
                     Positioned(  
-                      left: 9,
+                      left: 0,
                       top: 9,
                       child: Container (
                         width: 70,
@@ -477,7 +478,7 @@ class MainApp extends StatelessWidget {
                     ),
                     Positioned(  
                       top: 35.25,
-                      left: 35.25,
+                      left: 26.25,
                       child: Container (  
                         height: 17.8,
                         width: 17.8,
@@ -486,7 +487,7 @@ class MainApp extends StatelessWidget {
                     ),
                    Positioned (  
                       top: 15,
-                      left: 90.35,
+                      left: 81.35,
                       child: RichText (  
                         text: const TextSpan(  
                           style: TextStyle( 
@@ -529,7 +530,7 @@ class MainApp extends StatelessWidget {
                       ),
                     ),
                     Positioned(
-                      left: 90.35,
+                      left: 81.35,
                       top: 61.1,
                       child: Container(  
                         width: 14.54,
@@ -538,7 +539,21 @@ class MainApp extends StatelessWidget {
                       )
                     )
                   ],
+                ),
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Details()),
+                  );
+                },
+                style: ElevatedButton.styleFrom(   
+                  backgroundColor: Colors.white,
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(  
+                    borderRadius: BorderRadius.circular(15),
+                  )
                 )
+                ) 
               ),
             ),
             Positioned (  
@@ -631,9 +646,207 @@ class MainApp extends StatelessWidget {
                 )
               ),
             ),
-            Positioned (
+            Positioned(  
               top: 730,
-              child: Container(  
+              child: Menu(),
+            )
+            
+          ]
+        ),
+    );
+        
+  }
+}
+
+
+class Details extends StatelessWidget {
+  const Details({super.key});
+
+  @override
+  Widget build(BuildContext context){
+    return Container(
+      color: const Color(0xFFFCFCFC),
+      child: Stack(  
+        children: [
+          
+          Positioned (  
+                child: Image.asset('images/beach.png'),
+          ),
+          Positioned(  
+            top: 359,
+            child: Container(
+              height: 453,
+              width: 375,
+              decoration: BoxDecoration(  
+                color: Color(0xFFFCFCFC),
+                borderRadius: BorderRadius.circular(40),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 730,
+            child: Menu(),
+          ),
+          Positioned(  
+            top: 322.43,
+            left: 153, 
+            child: Image.asset('images/star.png'),
+          ),
+          Positioned (
+            top: 30,
+            left: 20,
+            child: ElevatedButton( 
+              onPressed: (){
+              Navigator.push(
+                context,
+                    MaterialPageRoute(builder: (context) => const MainApp()),
+              );
+            },
+              style: ElevatedButton.styleFrom(  
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0,),
+              ),
+              child: Container (  
+                width:50,
+                height: 50,
+                decoration: BoxDecoration(  
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.circular(15),
+                  border: Border.all(
+                    width: 1,
+                    color: Colors.white,
+                  ),
+                ),
+                child: Image.asset('images/back1.png'),
+              ),
+            ),   
+          ),
+          Positioned(
+            top: 30,
+            left: 295,
+            child: Container(  
+              width: 50, 
+              height: 50, 
+              decoration: BoxDecoration(  
+                color: Colors.transparent,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(
+                  color: Colors.white, 
+                  width: 1,
+                ),
+              ),
+              child: Image.asset('images/addFav.png'),
+            ),
+          ),
+          const Positioned(  
+            top: 386, 
+            left: 40, 
+            child: Text(
+              'Unravel mysteries\nof the Maldives',
+              style: TextStyle(  
+                height: 1.5,
+                fontFamily: 'Gellix',
+                fontSize: 32,
+                fontWeight: FontWeight.w700,
+                color: Color(0xFF19202D),
+                decoration: TextDecoration.none, 
+              ),   
+            ),
+          ),
+          const Positioned(  
+            top: 557, 
+            left: 30, 
+            child: Text(
+              "Just say anything, George, say what ever's\nnatural, the first thing that comes to your\nmind. Take that you mutated son-of-a-bitch.\nMy pine, why you. You space bastard, you\nkilled a pine. You do? Yeah, it's 8:00. Hey\nMcFly, I thought I told you never",
+              style: TextStyle(  
+                height: 1.5,
+                fontFamily: 'Gellix',
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: Color(0xFF19202D),
+                decoration: TextDecoration.none, 
+              ),   
+            ),
+          ),
+          Positioned (
+            top: 488,
+            left: 30,
+            child: Container( 
+              height: 54,
+              width: 315,
+              decoration: BoxDecoration(  
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Stack(  
+                children: [
+                  Positioned(
+                    top: 14,
+                    left: 12,
+                    child: Container(  
+                      width: 26,
+                      height: 26,
+                      child: Image.asset('images/keanu.png'),
+                    ),
+                  ),
+                  Positioned(  
+                    left: 51,
+                    top: 20,
+                    child: Row(  
+                      children: [
+                        const Text(  
+                          'Keanu Carpent May 17',
+                          style: TextStyle(  
+                            color: Color(0xFF9397A0),
+                            fontFamily: 'Gellix',
+                            fontWeight: FontWeight.w300,
+                            fontSize: 13,
+                            decoration: TextDecoration.none,
+                          ),
+                        ),
+                        const SizedBox(width: 6),
+                        Container(
+                          width: 4,
+                          height: 4,
+                          decoration: BoxDecoration(  
+                            borderRadius: BorderRadius.circular(50),
+                            color: const Color(0xFF9397A0),
+                          ),
+                        ),
+                        const SizedBox(width: 6),
+                        const Text(  
+                          '8 min read',
+                          style: TextStyle(  
+                            color: Color(0xFF9397A0),
+                            fontFamily: 'Gellix',
+                            fontWeight: FontWeight.w300,
+                            fontSize: 13,
+                            decoration: TextDecoration.none,
+                          ),
+                        ),
+                      ]
+                    )
+                  )
+                ]
+              )
+            ),
+          ),
+                 
+        ],
+      ),
+    );
+    
+  }
+}
+
+class Menu extends StatefulWidget{
+  @override
+  _MenuState createState() => _MenuState();
+}
+class _MenuState extends State<Menu> {
+  Widget build(BuildContext context){
+    return Container(  
                 width: 375,
                 height: 82,
                 color: Colors.white,
@@ -700,13 +913,9 @@ class MainApp extends StatelessWidget {
                           ),
                         ),
                       ),
+                      
                     ]
                   )
-              ),
-            ),
-          ],
-        )
     );
-        
   }
 }
