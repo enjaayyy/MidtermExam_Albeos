@@ -212,22 +212,37 @@ class MainApp extends StatelessWidget {
               ),
             ),
             Positioned (  
-              left: 30, 
+              left: 20, 
               top: 245,
               child: Row(
                 children: [
-                  Container(
+                    Container(
                     width: 255,
                     height: 304,
                   decoration: BoxDecoration(  
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
                   ),
+                  child: ElevatedButton (
+                    onPressed: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Details()),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      elevation: 0,
+                      padding: EdgeInsets.only(left: 13),
+                      shape: RoundedRectangleBorder(  
+                    borderRadius: BorderRadius.circular(15),
+                  )
+                    ),
                   child: Stack (  
                     children: [  
                       Positioned(  
                         top: 12,
-                        left: 12,
+                        left: 0,
                         child: Container(  
                           width: 231,
                           height: 164,
@@ -239,7 +254,7 @@ class MainApp extends StatelessWidget {
                       ),
                       Positioned (
                         top: 190,
-                        left: 12,
+                        left: 0,
                         child: RichText(  
                           text: const TextSpan( 
                             style: TextStyle(  
@@ -272,7 +287,7 @@ class MainApp extends StatelessWidget {
                       ), 
                       Positioned (  
                         top: 250,
-                        left: 10,
+                        left: 0,
                         child: Container(  
                           width: 38,
                           height: 38,
@@ -283,7 +298,7 @@ class MainApp extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        left: 60, 
+                        left: 50, 
                         top: 254,
                         child: RichText(  
                           text: const TextSpan(
@@ -319,6 +334,8 @@ class MainApp extends StatelessWidget {
                     ],
                   )
                 ),
+              )
+                  
                 ],  
                 
               ),
@@ -462,7 +479,7 @@ class MainApp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: ElevatedButton (
-                  child:  Stack (
+                  child: Stack (
                   children: [
                     Positioned(  
                       left: 0,
@@ -543,7 +560,7 @@ class MainApp extends StatelessWidget {
                 onPressed: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Details()),
+                    MaterialPageRoute(builder: (context) => const ThirdPage()),
                   );
                 },
                 style: ElevatedButton.styleFrom(   
@@ -918,4 +935,418 @@ class _MenuState extends State<Menu> {
                   )
     );
   }
+}
+
+class ThirdPage extends StatelessWidget {
+  const ThirdPage({super.key});
+
+  @override
+  Widget build(BuildContext context){
+    return Container(  
+      color: Color(0xFFFCFCFC),
+      child: Stack(  
+        children: [ 
+          Positioned(  
+            top: 51,
+            left:30,
+            child: Image.asset('images/elly.png'),
+          ),
+          Positioned(  
+            top: 68,
+            left: 115,
+            child: RichText(  
+              text: const TextSpan(  
+                children: [
+                  TextSpan(  
+                    text: 'Elly Byers\n',
+                    style: TextStyle(  
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      fontFamily: 'Gellix',
+                      decoration: TextDecoration.none,
+                      color: Color(0xFF19202D),
+                    ),
+                  ),
+                  TextSpan(  
+                    text: 'Author & Writer',
+                    style: TextStyle(  
+                      fontFamily: 'Gellix',
+                      fontSize: 12, 
+                      fontWeight: FontWeight.w300,
+                      decoration: TextDecoration.none,
+                      color: Color(0xFF19202D),
+                      height: 2,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Positioned(  
+            top:65,
+            left: 236,
+            child: Container(  
+              width: 109,
+              height: 42,
+              decoration: BoxDecoration(  
+                color: const Color(0xFF5474FD),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: const Align(  
+                alignment: Alignment.center,
+                child: Text(  
+                  ' Following',
+                  style: TextStyle(  
+                    color: Colors.white,
+                    fontFamily: 'Gellix',
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          const Positioned(  
+            top: 141, 
+            left: 30,
+            child: Text(  
+              'Every piece of chocolate I ever ate is geting back\nat me.. desserts are very revengeful..',
+              style: TextStyle(  
+                height: 1.3,
+                color: Color(0xFF9397A0),
+                fontWeight: FontWeight.w400,
+                fontSize: 12,
+                fontFamily: 'Gellix',
+                decoration: TextDecoration.none, 
+              ),
+            ),
+          ),
+          Positioned(
+            top:202,
+            left:30,
+            child: Container(  
+              width: 315,
+              height: 95,
+              decoration: BoxDecoration(  
+                color: const Color(0xFF19202D),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(  
+                children: [
+                  const SizedBox(width: 27),
+                  RichText(  
+                    text: const TextSpan(  
+                      children: [
+                        TextSpan(
+                          text: '54.21k\n',
+                          style: TextStyle(  
+                            color: Colors.white, 
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16,
+                            fontFamily: 'Gellix',
+                            decoration: TextDecoration.none,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Followers',
+                          style: TextStyle(  
+                            color: Colors.white, 
+                            fontWeight: FontWeight.w500,
+                            fontSize: 12,
+                            fontFamily: 'Gellix',
+                            decoration: TextDecoration.none,
+                            height: 1.8,
+                          ),
+                        ),
+                      ]
+                    ) 
+                  ),
+                  const SizedBox(width: 26),
+                  Container(  
+                    width: 1,
+                    height: 38,
+                    decoration: BoxDecoration(  
+                      color: const Color(0xFFC1D4F9).withOpacity(.2),
+                    ),
+                  ),
+                  const SizedBox(width: 26),
+                  RichText(  
+                    text: const TextSpan(  
+                      children: [
+                        TextSpan(
+                          text: '2.11k\n',
+                          style: TextStyle(  
+                            color: Colors.white, 
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16,
+                            fontFamily: 'Gellix',
+                            decoration: TextDecoration.none,
+                          ),
+                        ),
+                        TextSpan(
+                          text: ' Posts',
+                          style: TextStyle(  
+                            color: Colors.white, 
+                            fontWeight: FontWeight.w500,
+                            fontSize: 12,
+                            fontFamily: 'Gellix',
+                            decoration: TextDecoration.none,
+                            height: 1.8,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 26),
+                  Container(  
+                    width: 1,
+                    height: 38,
+                    decoration: BoxDecoration(  
+                      color: const Color(0xFFC1D4F9).withOpacity(.2),
+                    ),
+                  ),
+                  const SizedBox(width: 26),
+                  RichText(  
+                    text: const TextSpan(  
+                      children: [
+                        TextSpan(
+                          text: '36.40k\n',
+                          style: TextStyle(  
+                            color: Colors.white, 
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16,
+                            fontFamily: 'Gellix',
+                            decoration: TextDecoration.none,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Followers',
+                          style: TextStyle(  
+                            color: Colors.white, 
+                            fontWeight: FontWeight.w500,
+                            fontSize: 12,
+                            fontFamily: 'Gellix',
+                            decoration: TextDecoration.none,
+                            height: 1.8,
+                          ),
+                        ),
+                      ],
+                    ), 
+                  ),
+
+                ],
+              ),
+            ),
+          ),
+          const Positioned(  
+            top:327,
+            left: 30,
+            child: Text(  
+              "Elly's Post",
+              style: TextStyle(  
+                fontFamily: 'Gellix',
+                fontSize: 17,
+                fontWeight: FontWeight.w700,
+                color: Color(0xFF19202D),
+                decoration: TextDecoration.none,
+              ),
+            ),
+          ),
+          const Positioned(  
+            top:327,
+            left: 303,
+            child: Text(  
+              "View All",
+              style: TextStyle(  
+                fontFamily: 'Gellix',
+                fontSize: 12,
+                fontWeight: FontWeight.w500,
+                color: Color(0xFF5474FD),
+                decoration: TextDecoration.none,
+              ),
+            ),
+          ),
+          Positioned(  
+            top: 366,
+            left:30,
+            child: Container(  
+              width:100,
+              height:100,
+              decoration: BoxDecoration(  
+                color: Colors.white, 
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Image.asset('images/iran.png'),
+            ),
+          ),
+          Positioned(  
+            top: 481,
+            left:30,
+            child: Container(  
+              width:100,
+              height:100,
+              decoration: BoxDecoration(  
+                color: Colors.white, 
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Image.asset('images/ukraine.png'),
+            ),
+          ),
+          Positioned(
+            top: 372,
+            left: 144.4,
+            child: RichText(
+              text: const TextSpan(  
+                children: [
+                  TextSpan(  
+                    text: 'News: Politics\n',
+                    style: TextStyle(  
+                      fontFamily: 'Gellix',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 10,
+                      color: Color(0xFF9397A0),
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
+                  TextSpan(  
+                    text: "Iran's raging protests\n",
+                    style: TextStyle(  
+                      fontFamily: 'Gellix',
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      color: Color(0xFF19202D),
+                      decoration: TextDecoration.none,
+                      height: 2,
+                    ),
+                  ),
+                  TextSpan(  
+                    text: "Fifth Iranian paramilitary me...\n",
+                    style: TextStyle(  
+                      fontFamily: 'Gellix',
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      color: Color(0xFF19202D),
+                      decoration: TextDecoration.none,
+                      height:1.5,
+                    ),
+                  ),
+                  TextSpan(  
+                    text: '        16th May                             09 : 32 pm',
+                    style: TextStyle(  
+                      fontFamily: 'Gellix',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 11,
+                      color: Color(0xFF9397A0),
+                      decoration: TextDecoration.none,
+                      height: 2.7,
+                    ),
+                  ),
+                ]
+              ),
+            ),
+          ),
+          Positioned(  
+            top: 443.4,
+            left: 144.4,
+            child: Image.asset('images/calendar.png'),
+          ),
+          Positioned(  
+            top: 443.4,
+            left: 269.15,
+            child: Image.asset('images/time.png'),
+          ),
+          Positioned(
+            top: 487,
+            left: 144.4,
+            child: RichText(
+              text: const TextSpan(  
+                children: [
+                  TextSpan(  
+                    text: 'News: Science\n',
+                    style: TextStyle(  
+                      fontFamily: 'Gellix',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 10,
+                      color: Color(0xFF9397A0),
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
+                  TextSpan(  
+                    text: "Putin to host ceremony\n",
+                    style: TextStyle(  
+                      fontFamily: 'Gellix',
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      color: Color(0xFF19202D),
+                      decoration: TextDecoration.none,
+                      height: 2,
+                    ),
+                  ),
+                  TextSpan(  
+                    text: "annexing occupied Ukrainia...\n",
+                    style: TextStyle(  
+                      fontFamily: 'Gellix',
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      color: Color(0xFF19202D),
+                      decoration: TextDecoration.none,
+                      height:1.5,
+                    ),
+                  ),
+                  TextSpan(  
+                    text: '        11th May                             10 : 15 pm',
+                    style: TextStyle(  
+                      fontFamily: 'Gellix',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 11,
+                      color: Color(0xFF9397A0),
+                      decoration: TextDecoration.none,
+                      height: 2.7,
+                    ),
+                  ),
+                ]
+              ),
+            ),
+          ),
+          Positioned(  
+            top: 557.4,
+            left: 144.4,
+            child: Image.asset('images/calendar.png'),
+          ),
+          Positioned(  
+            top: 557.4,
+            left: 269.15,
+            child: Image.asset('images/time.png'),
+          ),
+          const Positioned(
+            left: 30,
+            top: 611,
+            child: Text(  
+              'Popular From Elly',
+               style: TextStyle(  
+                      fontFamily: 'Gellix',
+                      fontWeight: FontWeight.w700,
+                      fontSize: 17,
+                      color: Color(0xFF19202D),
+                      decoration: TextDecoration.none,
+                    ),
+            ),
+          ),
+          Positioned(  
+            left: 30, 
+            top: 651,
+            child: Image.asset('images/church.png'),
+          ),
+          Positioned(  
+            left: 294, 
+            top: 651,
+            child: Image.asset('images/cut.png'),
+          )
+        ],
+      )
+    );
+  }
+
+
 }
